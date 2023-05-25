@@ -19,7 +19,6 @@ const ChatSideBar: React.FC<SideBar> = ({
 
     const [userItems, setItems] = useState<any>([])
     useEffect(() => {
-        console.log("currentUser", currentUser)
         setItems(users.map(user => ({
             key: user._id,
             icon: <UserOutlined />,

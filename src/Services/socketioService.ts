@@ -16,7 +16,7 @@ const getSocketInstance = async() => {
     return socket
 }
 
-export const initSocket = async(setOnlineState: any) => {
+const initSocket = async(setOnlineState: any) => {
     const sio = await getSocketInstance()
 
     sio.on('connect', () => {
@@ -32,4 +32,9 @@ export const initSocket = async(setOnlineState: any) => {
     })
 
     return sio
+}
+
+export {
+    initSocket,
+    getSocketInstance,
 }
